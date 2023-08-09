@@ -284,7 +284,7 @@ func (r *staffRepo) GetListTop(ctx context.Context, req *models.StaffGetListRequ
 		offset    = " OFFSET 0"
 		limit     = " LIMIT 10"
 		order     = " ORDER BY s.balance DESC"
-		typeStaff = " s.type=$1"
+		typeStaff = " AND s.type=$1"
 	)
 
 	query = `
